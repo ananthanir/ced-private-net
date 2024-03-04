@@ -3,7 +3,7 @@ First create a random secret
 ```
 openssl rand -hex 32 | tr -d "\n" > jwtsecret.hex
 ```
-Create the besu configuration
+Create the besu configuration (config.toml)
 ```
 network="GOERLI"            
 data-path="/path to data directory to store networkdata"
@@ -21,7 +21,7 @@ Run Besu
 ```
 besu --Xlauncher
 ```
-Configure Teku
+Configure Teku (config.yaml)
 ```
 network: "goerli"  
 ee-endpoint: "http://localhost:8551"
