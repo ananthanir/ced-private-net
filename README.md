@@ -136,19 +136,19 @@ Copy the genesis & keys file to the QBFT-Network directory
 
 Start the first node as the bootnode
 ```
-besu --data-path=data --genesis-file=./genesis.json --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3,QBFT --host-allowlist="*" --rpc-http-cors-origins="all"
+besu --data-path=Node1/data --genesis-file=./genesis.json --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3,QBFT --host-allowlist="*" --rpc-http-cors-origins="all"
 ```
 Start Node-2
 ```
-besu --data-path=data --genesis-file=./genesis.json --bootnodes=<Node-1 Enode URL> --p2p-port=30304 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3,QBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8546
+besu --data-path=Node2/data --genesis-file=./genesis.json --bootnodes=<Node-1 Enode URL> --p2p-port=30304 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3,QBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8546
 ```
 Start Node-3
 ```
-besu --data-path=data --genesis-file=./genesis.json --bootnodes=<Node-1 Enode URL> --p2p-port=30305 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3,QBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8547
+besu --data-path=Node3/data --genesis-file=./genesis.json --bootnodes=<Node-1 Enode URL> --p2p-port=30305 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3,QBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8547
 ```
 Start Node-4
 ```
-besu --data-path=data --genesis-file=../genesis.json --bootnodes=<Node-1 Enode URL> --p2p-port=30306 --rpc-http-enabled --rpc-http-api=ETH,NET,QBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8548
+besu --data-path=Node4/data --genesis-file=./genesis.json --bootnodes=<Node-1 Enode URL> --p2p-port=30306 --rpc-http-enabled --rpc-http-api=ETH,NET,QBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8548
 ```
 Confirm the private network is working
 ```
