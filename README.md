@@ -62,11 +62,11 @@ Create a configuration file
 ```
 Start the first node as the bootnode
 ```
-besu --data-path=data --genesis-file=./genesis.json --network-id 123 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host "0.0.0.0" --miner-enabled --miner-coinbase="0x9aC31F4E54c731de531894eE7DC24784370f5AE8"
+besu --data-path=node1 --genesis-file=./genesis.json --network-id 123 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host "0.0.0.0" --miner-enabled --miner-coinbase="0x9aC31F4E54c731de531894eE7DC24784370f5AE8"
 ```
 Start the second node as the bootnode
 ```
-besu --data-path=data --genesis-file=./genesis.json --network-id 123 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host "0.0.0.0" --miner-coinbase="0x9aC31F4E54c731de531894eE7DC24784370f5AE8" --rpc-http-port "8546" --p2p-port "30301" --bootnodes="enode://88888026ace7c076d2f3bff374a8c6ce7449e7d3a4bfc79a5347e3b4e0550d5ceb42c9f12d2592396e705fba889e310c8d2897059d2581a771508c64a651668f@134.209.148.99:30303"
+besu --data-path=node2 --genesis-file=./genesis.json --network-id 123 --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,MINER,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-host "0.0.0.0" --miner --rpc-http-port "8546" --p2p-port "30301" --bootnodes="enode://f9c6a6cc19248cf256936f086bb57bd85f4edd0d98eb65f1b966e85a12a6985c7375e1b510a6c6ef095998ba2760dfab4f5b2093936f01563d54d9ef0f4f6bac@127.0.0.1:30303"
 ```
 
 # Private Network QBFT
