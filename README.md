@@ -19,7 +19,7 @@ engine-jwt-secret= "/path to jwtsecret.hex"
 ```
 Run Besu
 ```
-besu --Xlauncher
+besu --config-file "config.toml"
 ```
 Configure Teku (config.yaml)
 ```
@@ -31,7 +31,7 @@ rest-api-enabled: true
 ```
 Run Teku
 ```
-teku --config-file config.yaml
+teku --config-file config.yaml --ignore-weak-subjectivity-period-enabled
 ```
 
 # Private Network PoW
